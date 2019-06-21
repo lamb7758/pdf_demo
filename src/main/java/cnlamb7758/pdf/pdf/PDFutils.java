@@ -92,10 +92,10 @@ public class PDFutils {
             Certificate[] chain = ks.getCertificateChain(alias);
             //new一个上边自定义的方法对象，调用签名方法
             PDFutils app = new PDFutils();
-//      app.sign(SRC, String.format(DEST, 1), chain, pk, DigestAlgorithms.SHA1, provider.getName(), CryptoStandard.CMS, "Test 1", "Ghent");
-//      app.sign(SRC, String.format(DEST, 2), chain, pk, "SM3", provider.getName(), CryptoStandard.CADES, "Test 2", "Ghent");
+//            app.sign(SRC, String.format(DEST, 1), chain, pk, DigestAlgorithms.SHA1, provider.getName(), CryptoStandard.CMS, "Test 1", "Ghent");
+//            app.sign(SRC, String.format(DEST, 2), chain, pk, "SM3", provider.getName(), CryptoStandard.CADES, "Test 2", "Ghent");
             app.sign(SRC, String.format(DEST, 3), chain, pk, DigestAlgorithms.SHA1, null, CryptoStandard.CMS, "Test 3", "Ghent");
-//      app.sign(SRC, String.format(DEST, 4), chain, pk, DigestAlgorithms.RIPEMD160, provider.getName(), CryptoStandard.CADES, "Test 4", "Ghent");
+//            app.sign(SRC, String.format(DEST, 4), chain, pk, DigestAlgorithms.RIPEMD160, provider.getName(), CryptoStandard.CADES, "Test 4", "Ghent");
         } catch (Exception e) {
             // TODO Auto-generated catch block
             JOptionPane.showMessageDialog(null, e.getMessage());
